@@ -1,0 +1,41 @@
+{
+  "name": "mvg",
+  "version": "1.0.0",
+  "description": "A simple API adapter for fetching live data (timetables, stations, lines, messages, incidents, etc.) from MVG (Münchner Verkehrsgesellschaft)",
+  "author": {
+    "name": "Thomas Rasshofer",
+    "email": "hello@thomasrasshofer.com",
+    "url": "http://thomasrasshofer.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rasshofer/mvg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rasshofer/mvg/issues"
+  },
+  "main": "mvg.js",
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "jest": "^22.4.3",
+    "jest-extended": "^0.6.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "scripts": {
+    "test": "eslint . && jest --coverage --forceExit",
+    "coverage": "cat ./coverage/lcov.info | coveralls"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupTestFrameworkScriptFile": "jest-extended",
+    "roots": [
+      "test"
+    ]
+  }
+}

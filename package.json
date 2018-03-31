@@ -1,6 +1,6 @@
 {
   "name": "mvg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple API adapter for fetching live data (timetables, stations, lines, messages, incidents, etc.) from MVG (Münchner Verkehrsgesellschaft)",
   "author": {
     "name": "Thomas Rasshofer",

@@ -394,6 +394,8 @@ mvg.getPlan('SCHNELL').then((plan) => {
 
 ## Changelog
 
+* 1.0.1
+  * Implement code style fixes
 * 1.0.0
   * Initial version
 

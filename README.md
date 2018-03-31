@@ -17,10 +17,10 @@ npm install --save-dev mvg
 const mvg = require('mvg');
 
 mvg.getStations().then((stations) => {
- const demo = stations.find((station) => station.name === 'Universität');
- mvg.getDepartures(demo.id).then((departures) => {
+  const demo = stations.find((station) => station.name === 'Universität');
+  mvg.getDepartures(demo.id).then((departures) => {
     console.log(departures);
- });
+  });
 });
 ```
 

@@ -13,12 +13,12 @@ const PRODUCTS = [
 ];
 
 const DEPARTURES_DEFAULTS = {
-  footway: 0,
-  bus: 1,
-  ubahn: 1,
-  sbahn: 1,
-  tram: 1,
-  zug: 1
+  footway: false,
+  bus: true,
+  ubahn: true,
+  sbahn: true,
+  tram: true,
+  zug: true
 };
 
 function apiRequest(method, url, config = {}) {
@@ -72,9 +72,9 @@ function getDepartures(stationId, config = {}) {
   }
   return new Promise((resolve, reject) => {
     const filters = {};
-    Object.keys(DEPARTURES_DEFAULTS).forEach((prop) => {
-      const propValue = (config[prop] ? 1 : 0);
-      filters[prop] = config[prop] !== undefined ? propValue : DEPARTURES_DEFAULTS[prop];
+    const merged = Object.assign({}, DEPARTURES_DEFAULTS, config);
+    Object.keys(merged).forEach((prop) => {
+      filters[prop] = merged[prop] ? 1 : 0;
     });
     apiRequest('get', `departure/${stationId}`, {
       params: filters

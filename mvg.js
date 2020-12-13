@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const API_BASE_URL = 'https://apps.mvg-fahrinfo.de/v10/rest/10.0/';
+const API_BASE_URL = 'https://apps.mvg-fahrinfo.de/v12/rest/12.0/';
 const API_KEY = 'aklKa290LsadOLW';
 
 const PRODUCTS = [
